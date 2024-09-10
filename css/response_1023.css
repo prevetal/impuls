@@ -1,0 +1,285 @@
+@media print,
+(max-width: 1023px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    .cont
+    {
+        padding: 0 20px;
+    }
+
+
+
+    /*--------------
+        Fancybox
+    --------------*/
+    .fancybox__slide
+    {
+        padding: 24px;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block .cols
+    {
+        gap: 20px;
+    }
+
+
+
+    /*-----------------
+        Main slider
+    -----------------*/
+    .main_slider .data
+    {
+        min-height: 392px;
+    }
+
+
+    .main_slider .info
+    {
+        padding: 20px 20px 20px 120px;
+
+        text-align: right;
+    }
+
+
+    .main_slider .title
+    {
+        font-size: 18px;
+        line-height: normal;
+    }
+
+
+    .main_slider .desc
+    {
+        font-size: 12px;
+        line-height: 15px;
+
+        width: 392px;
+        max-width: 100%;
+        margin-left: auto;
+    }
+
+
+
+    /*--------
+        We
+    --------*/
+    .we .col_left
+    {
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+
+    .we .col_right
+    {
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+
+
+    /*-----------
+        Goals
+    -----------*/
+    .goals .row
+    {
+        margin-left: -40px;
+    }
+
+
+    .goals .row > *
+    {
+        max-width: calc(50% - 40px);
+        margin-left: 40px;
+    }
+
+
+
+    .goals .bottom .bg
+    {
+        bottom: 24px;
+
+        width: 260px;
+    }
+
+
+
+    /*------------------
+        Support form
+    ------------------*/
+    .support_form .data
+    {
+        padding: 40px 26px;
+    }
+
+
+
+    /*--------------
+        Projects
+    --------------*/
+    .projects .row > *
+    {
+        width: 100%;
+    }
+
+
+
+    /*------------------
+        Project info
+    ------------------*/
+    .project_info .images
+    {
+        width: calc(100% + 40px);
+        margin-right: -20px;
+        margin-left: -20px;
+        padding: 40px 20px;
+
+        gap: 20px;
+    }
+
+
+
+    /*------------------
+        Product info
+    ------------------*/
+    .product_info .desc,
+    .product_info .data
+    {
+        width: 100%;
+    }
+
+
+    .product_info .data
+    {
+        order: 2;
+
+        margin-top: 40px;
+    }
+
+
+    .product_info .image
+    {
+        width: 392px;
+        margin-left: 0;
+    }
+
+
+
+    /*--------------
+        Products
+    --------------*/
+    .products .accordion
+    {
+        width: 100%;
+    }
+
+
+
+    /*----------------
+        About info
+    ----------------*/
+    .about_info .data
+    {
+        width: 100%;
+    }
+
+
+    .about_info .title
+    {
+        width: 100%;
+    }
+
+
+    .about_info .image
+    {
+        width: 100%;
+        margin-top: 24px;
+    }
+
+
+
+    /*----------------
+        Directions
+    ----------------*/
+    .directions .list
+    {
+        gap: 0;
+    }
+
+
+    .directions .list .item:last-child
+    {
+        padding-bottom: 0;
+    }
+
+
+    .directions .list .item .info,
+    .directions .list .item .desc
+    {
+        width: 100%;
+    }
+
+
+    .directions .list .item .desc
+    {
+        margin-top: 20px;
+    }
+
+
+
+    .directions .row .item
+    {
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+
+        min-height: 240px;
+    }
+
+
+    .directions .row .item .icon
+    {
+        margin-right: auto;
+    }
+
+
+    .directions .row .item .name
+    {
+        width: 100%;
+        max-width: 100%;
+        margin-top: auto;
+    }
+
+
+    .directions .row .item .arrow
+    {
+        display: none;
+    }
+
+
+
+    /*-------------
+        History
+    -------------*/
+    .history .item.animated .gradient_year
+    {
+        transform: translateX(0);
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header .email
+    {
+        margin-left: auto;
+    }
+}

@@ -1,0 +1,317 @@
+@media print,
+(max-width: 1279px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    html.custom_scroll ::-webkit-scrollbar
+    {
+        width: 5px;
+        height: 5px;
+    }
+
+
+
+    /*--------------
+        Fancybox
+    --------------*/
+    .fancybox__slide
+    {
+        padding: 50px;
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header
+    {
+        padding: 16px 0 11px;
+    }
+
+
+    header .data
+    {
+        width: calc(100% - 277px);
+    }
+
+
+    header .data .row + .row
+    {
+        padding-top: 15px;
+    }
+
+
+    header .logo img
+    {
+        width: 188px;
+        max-width: 100%;
+    }
+
+
+    header .menu,
+    header .support_btn
+    {
+        display: none;
+    }
+
+
+    header .mob_menu_btn
+    {
+        display: flex;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block .cols
+    {
+        flex-direction: column;
+
+        gap: 24px;
+    }
+
+
+    .text_block .cols .col
+    {
+        width: 100%;
+    }
+
+
+
+    /*-----------------
+        Main slider
+    -----------------*/
+    .main_slider .data
+    {
+        min-height: 440px;
+    }
+
+
+    .main_slider .info
+    {
+        padding: 24px 40px 20px 120px;
+    }
+
+
+
+    /*--------
+        We
+    --------*/
+    .we .col_left
+    {
+        width: 400px;
+    }
+
+
+    .we .col_right
+    {
+        width: calc(100% - 400px);
+        padding: 40px;
+    }
+
+
+
+    /*-----------
+        Goals
+    -----------*/
+    .goals .row
+    {
+        margin-left: -24px;
+    }
+
+
+    .goals .row > *
+    {
+        max-width: calc(33.333% - 24px);
+        margin-left: 24px;
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info .title
+    {
+        width: 100%;
+    }
+
+
+    .contacts_info .data
+    {
+        width: 675px;
+        margin-top: 40px;
+        margin-left: 0;
+    }
+
+
+
+    /*--------------
+        Projects
+    --------------*/
+    .projects .row
+    {
+        gap: 40px 24px;
+    }
+
+
+    .projects .row > *
+    {
+        width: calc(50% - 12px);
+    }
+
+
+    .projects .row > *.small
+    {
+        width: calc(50% - 24px);
+    }
+
+
+    .projects .project .thumb
+    {
+        width: 240px;
+        min-height: 220px;
+    }
+
+
+    .projects .project .thumb + *
+    {
+        width: calc(100% - 240px);
+    }
+
+
+    .projects .project .arrow
+    {
+        right: 0;
+        bottom: 8px;
+    }
+
+
+    .projects .project:hover .arrow
+    {
+        right: 8px;
+    }
+
+
+
+    /*------------------
+        Project info
+    ------------------*/
+    .project_info .sub_title
+    {
+        width: 620px;
+        max-width: 100%;
+    }
+
+
+
+    /*------------------
+        Product info
+    ------------------*/
+    .product_info .desc,
+    .product_info .data,
+    .product_info .image
+    {
+        width: calc(50% - 24px);
+    }
+
+
+
+    /*--------------
+        Products
+    --------------*/
+    .products .accordion
+    {
+        width: calc(50% - 24px);
+    }
+
+
+
+    /*----------------
+        About info
+    ----------------*/
+    .about_info .data,
+    .about_info .image
+    {
+        width: calc(50% - 24px);
+    }
+
+
+
+    /*----------------
+        Directions
+    ----------------*/
+    .directions .list .item .info,
+    .directions .list .item .desc
+    {
+        width: calc(50% - 24px);
+    }
+
+
+
+    .directions .row .item
+    {
+        min-height: 200px;
+    }
+
+
+    .directions .row .item .arrow
+    {
+        right: 22px;
+        bottom: 22px;
+    }
+
+
+    .directions .row .item:hover .arrow
+    {
+        right: 22px;
+        bottom: 22px;
+
+        width: 56px;
+        height: 56px;
+    }
+
+
+
+    /*-----------
+        Certs
+    -----------*/
+    .certs .row
+    {
+        margin-bottom: -48px;
+        margin-left: -48px;
+    }
+
+
+    .certs .row > *
+    {
+        width: calc(50% - 48px);
+        margin-bottom: 48px;
+        margin-left: 48px;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer .bottom
+    {
+        padding: 20px 0;
+    }
+
+
+
+    footer .corp_correspondence
+    {
+        width: 100%;
+        margin-top: 43px;
+        padding-top: 24px;
+
+        border-top: 1px solid #fff;
+    }
+}

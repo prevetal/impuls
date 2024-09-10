@@ -1,0 +1,238 @@
+@media print,
+(max-width: 1439px)
+{
+    /*------------
+        Header
+    ------------*/
+    header .data
+    {
+        width: calc(100% - 340px);
+    }
+
+
+    header .menu .sub_menu .padding
+    {
+        padding-left: 343px;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block .cols .col
+    {
+        width: calc(50% - 40px);
+    }
+
+
+
+    /*--------
+        We
+    --------*/
+    .we .col_left
+    {
+        width: 440px;
+    }
+
+
+    .we .col_right
+    {
+        width: calc(100% - 440px);
+        padding: 40px 120px;
+    }
+
+
+
+    /*-----------
+        Goals
+    -----------*/
+    .goals .bottom .bg
+    {
+        width: 320px;
+    }
+
+
+
+    /*--------------------
+        Privacy policy
+    --------------------*/
+    .privacy_policy .text_block
+    {
+        padding: 0;
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info .row
+    {
+        padding: 0;
+    }
+
+
+    .contacts_info .data
+    {
+        width: 648px;
+        margin-left: 196px;
+    }
+
+
+
+    /*--------------
+        Projects
+    --------------*/
+    .projects .row.small
+    {
+        margin-bottom: -24px;
+        margin-left: -24px;
+    }
+
+
+    .projects .row > *.small
+    {
+        width: calc(25% - 24px);
+        margin-bottom: 24px;
+        margin-left: 24px;
+    }
+
+
+    .projects .project
+    {
+        gap: 0;
+    }
+
+
+    .projects .project .thumb + *
+    {
+        width: calc(100% - 280px);
+    }
+
+
+
+    /*------------------
+        Project info
+    ------------------*/
+    .project_info .sub_title
+    {
+        width: calc(50% - 40px);
+    }
+
+
+    .project_info .data
+    {
+        padding: 0;
+    }
+
+
+    .project_info .images
+    {
+        padding: 40px;
+    }
+
+
+
+    /*------------------
+        Product info
+    ------------------*/
+    .product_info .desc,
+    .product_info .data,
+    .product_info .image
+    {
+        width: calc(50% - 40px);
+    }
+
+
+    .product_info .slider .swiper-slide
+    {
+        visibility: visible;
+
+        pointer-events: auto;
+
+        opacity: 1;
+    }
+
+
+
+    /*--------------
+        Products
+    --------------*/
+    .products .accordion
+    {
+        width: calc(50% - 40px);
+    }
+
+
+
+    /*----------------
+        About info
+    ----------------*/
+    .about_info .row
+    {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+
+    .about_info .data,
+    .about_info .image
+    {
+        width: calc(50% - 40px);
+    }
+
+
+
+    /*----------------
+        Directions
+    ----------------*/
+    .directions .list
+    {
+        padding: 0;
+    }
+
+
+    .directions .list .item .info,
+    .directions .list .item .desc
+    {
+        width: calc(50% - 40px);
+    }
+
+
+
+    /*-------------
+        History
+    -------------*/
+    .history .list
+    {
+        padding: 0;
+    }
+
+
+
+    /*-----------
+        Certs
+    -----------*/
+    .certs .text_block
+    {
+        width: 840px;
+        padding: 0;
+    }
+
+
+    .certs .row
+    {
+        padding: 0;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer .corp_correspondence
+    {
+        width: 540px;
+    }
+}
