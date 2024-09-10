@@ -232,14 +232,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	function scrollTracking(entries) {
 		for (const entry of entries) {
-			if (entry.intersectionRatio >= 0.2 && !entry.target.classList.contains('animated') && !entry.target.classList.contains('animate2')) {
-				entry.target.classList.add('animated')
+			if (entry.target.classList.contains('animate')) {
+				if (entry.intersectionRatio >= 0.2 && !entry.target.classList.contains('animated')) {
+					entry.target.classList.add('animated')
+				}
 			}
 
-			if (entry.intersectionRatio >= 1.0 && entry.target.classList.contains('animate2')) {
-				entry.target.classList.add('animated')
-			} else {
-				entry.target.classList.remove('animated')
+			if (entry.target.classList.contains('animate2')) {
+				if (entry.intersectionRatio >= 1.0) {
+					entry.target.classList.add('animated')
+				} else {
+					entry.target.classList.remove('animated')
+				}
 			}
 		}
 	}
