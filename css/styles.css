@@ -433,13 +433,17 @@ button
 ------------*/
 header
 {
-    position: relative;
+    position: sticky;
     z-index: 9;
     top: 0;
     left: 0;
 
     width: 100%;
     padding: 20px 0 8px;
+
+    transition: .2s linear;
+
+    background: var(--bg);
 }
 
 
@@ -487,6 +491,11 @@ header .logo img
     display: block;
 }
 
+header .logo img + img
+{
+    display: none;
+}
+
 
 
 header .data
@@ -521,6 +530,8 @@ header .phone
     font-size: 12px;
     line-height: 15px;
 
+    transition: color .2s linear;
+
     color: #444;
 }
 
@@ -541,6 +552,8 @@ header .email
     line-height: 15px;
 
     margin-left: 25px;
+
+    transition: color .2s linear;
 
     color: #444;
 }
@@ -642,33 +655,7 @@ header .menu .sub_menu
 }
 
 
-header .menu .sub_menu:before
-{
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-
-    display: block;
-
-    width: 100%;
-    height: 8px;
-    margin-bottom: 2px;
-
-    content: '';
-}
-
-
-header .menu .menu_item:hover > a.touch_link + .sub_menu
-{
-    visibility: hidden;
-
-    pointer-events: none;
-
-    opacity: 0;
-}
-
-header .menu .menu_item:hover .sub_menu,
-header .menu .menu_item > a.touch_link + .sub_menu.show
+header .menu .sub_menu.show
 {
     visibility: visible;
 
@@ -842,6 +829,8 @@ header .support_btn
     font-weight: 700;
     line-height: 22px;
 
+    position: relative;
+
     padding: 14px 39px;
 
     transition: .2s linear;
@@ -851,10 +840,45 @@ header .support_btn
 }
 
 
+header .support_btn:before
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    display: block;
+
+    width: 0;
+    height: 100%;
+    margin: 0 auto;
+
+    content: '';
+    transition: .2s linear;
+
+    opacity: 0;
+    background: #de6225;
+}
+
+
+header .support_btn span
+{
+    position: relative;
+    z-index: 2;
+}
+
+
 header .support_btn:hover
 {
     color: #fff;
-    background: #de6225;
+}
+
+header .support_btn:hover:before
+{
+    width: 100%;
+
+    opacity: 1;
 }
 
 
@@ -899,6 +923,57 @@ header .mob_menu_btn .icon svg
 
 
 
+.menu_open header
+{
+    color: #fff;
+    background: #444;
+}
+
+
+.menu_open header .logo img
+{
+    display: none;
+}
+
+.menu_open header .logo img + img
+{
+    display: block;
+}
+
+
+.menu_open header .phone,
+.menu_open header .email
+{
+    color: currentColor;
+}
+
+
+.menu_open header .data .row + .row
+{
+    border-color: currentColor;
+}
+
+
+.menu_open header .support_btn
+{
+    color: currentColor;
+    border-color: #fff;
+}
+
+
+.menu_open header .support_btn:before
+{
+    background: #fff;
+}
+
+
+.menu_open header .support_btn:hover
+{
+    color: #000;
+}
+
+
+
 /*---------------
     Mob. menu
 ---------------*/
@@ -908,6 +983,8 @@ header .mob_menu_btn .icon svg
     z-index: 90;
     top: 0;
     right: 100%;
+
+    overflow: hidden;
 
     width: 100%;
     height: 100%;
@@ -1664,6 +1741,8 @@ header .mob_menu_btn .icon svg
     font-weight: 700;
     line-height: 22px;
 
+    position: relative;
+
     padding: 13px 53px;
 
     transition: .2s linear;
@@ -1672,10 +1751,45 @@ header .mob_menu_btn .icon svg
 }
 
 
+.form .submit_btn:before
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    display: block;
+
+    width: 0;
+    height: 100%;
+    margin: 0 auto;
+
+    content: '';
+    transition: .2s linear;
+
+    opacity: 0;
+    background: #de6225;
+}
+
+
+.form .submit_btn span
+{
+    position: relative;
+    z-index: 2;
+}
+
+
 .form .submit_btn:hover
 {
     color: #fff;
-    background: #de6225;
+}
+
+.form .submit_btn:hover:before
+{
+    width: 100%;
+
+    opacity: 1;
 }
 
 
@@ -2000,6 +2114,8 @@ header .mob_menu_btn .icon svg
     font-weight: 700;
     line-height: 22px;
 
+    position: relative;
+
     display: inline-block;
 
     padding: 14px 39px;
@@ -2013,10 +2129,45 @@ header .mob_menu_btn .icon svg
 }
 
 
+.error_info .link a:before
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    display: block;
+
+    width: 0;
+    height: 100%;
+    margin: 0 auto;
+
+    content: '';
+    transition: .2s linear;
+
+    opacity: 0;
+    background: #de6225;
+}
+
+
+.error_info .link a span
+{
+    position: relative;
+    z-index: 2;
+}
+
+
 .error_info .link a:hover
 {
     color: #fff;
-    background: #de6225;
+}
+
+.error_info .link a:hover:before
+{
+    width: 100%;
+
+    opacity: 1;
 }
 
 
@@ -2232,8 +2383,9 @@ header .mob_menu_btn .icon svg
     display: block;
 
     width: 36px;
-    height: 34px;
+    height: 36px;
 
+    transition: transform .2s linear;
     transform: rotate(-90deg);
 }
 
@@ -2241,6 +2393,12 @@ header .mob_menu_btn .icon svg
 .projects .head .all_link a:hover
 {
     color: #de6225;
+}
+
+
+.projects .head .all_link a:hover .icon svg
+{
+    transform: scale(1.3) rotate(-90deg);
 }
 
 
@@ -2467,6 +2625,27 @@ header .mob_menu_btn .icon svg
 }
 
 
+.projects .project.small .thumb:before
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+    transition: opacity .2s linear;
+    pointer-events: none;
+
+    opacity: 0;
+    background: #444;
+}
+
+
 .projects .project.small .thumb + *
 {
     display: flex;
@@ -2474,6 +2653,8 @@ header .mob_menu_btn .icon svg
     flex-direction: column;
 
     width: 100%;
+
+    transition: .2s linear;
 
     background: none;
 }
@@ -2515,21 +2696,7 @@ header .mob_menu_btn .icon svg
 
 .projects .project.small:hover .thumb:before
 {
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    content: '';
-    pointer-events: none;
-
     opacity: .8;
-    background: #444;
 }
 
 
@@ -3075,42 +3242,13 @@ header .mob_menu_btn .icon svg
 }
 
 
-.product_info .slider
+.product_info .row
 {
-    overflow: visible !important;
+    justify-content: space-between;
 
     padding-bottom: 40px;
 
     border-bottom: 1px solid #b8b9b7;
-}
-
-
-.product_info .slider .swiper-slide
-{
-    position: relative;
-
-    visibility: hidden;
-
-    transition: opacity .2s linear, visibility .2s linear;
-    pointer-events: none;
-
-    opacity: 0;
-}
-
-
-.product_info .slider .swiper-slide.visible
-{
-    visibility: visible;
-
-    pointer-events: auto;
-
-    opacity: 1;
-}
-
-
-.product_info .slider .row
-{
-    justify-content: space-between;
 }
 
 
@@ -3140,14 +3278,15 @@ header .mob_menu_btn .icon svg
 }
 
 
-.product_info .image
+.product_info .images
 {
     width: calc(50% - 60px);
+    max-width: 100%;
     margin-left: auto;
 }
 
 
-.product_info .image img
+.product_info .images img
 {
     display: block;
 
@@ -3310,9 +3449,8 @@ header .mob_menu_btn .icon svg
     position: absolute;
     z-index: 1;
     top: 6px;
-    right: -8px;
+    right: -48px;
 
-    transition: transform .3s linear .2s;
     pointer-events: none;
 
     opacity: .5;
@@ -3321,12 +3459,6 @@ header .mob_menu_btn .icon svg
     -webkit-background-clip: text;
 
     -webkit-text-stroke: 4px transparent;
-}
-
-
-.history .item.animated .gradient_year
-{
-    transform: translateX(-100px);
 }
 
 
@@ -3716,6 +3848,8 @@ header .mob_menu_btn .icon svg
     font-weight: 700;
     line-height: 22px;
 
+    position: relative;
+
     width: 101px;
     max-width: 100%;
     height: 51px;
@@ -3727,10 +3861,45 @@ header .mob_menu_btn .icon svg
 }
 
 
+.cookie_info .btn:before
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    display: block;
+
+    width: 0;
+    height: 100%;
+    margin: 0 auto;
+
+    content: '';
+    transition: .2s linear;
+
+    opacity: 0;
+    background: #de6225;
+}
+
+
+.cookie_info .btn span
+{
+    position: relative;
+    z-index: 2;
+}
+
+
 .cookie_info .btn:hover
 {
     color: #fff;
-    background: #de6225;
+}
+
+.cookie_info .btn:hover:before
+{
+    width: 100%;
+
+    opacity: 1;
 }
 
 

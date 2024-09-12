@@ -33,7 +33,7 @@
 
     header .data
     {
-        width: calc(100% - 277px);
+        width: calc(100% - 240px);
     }
 
 
@@ -50,16 +50,33 @@
     }
 
 
-    header .menu,
-    header .support_btn
+    header .menu_item + .menu_item
     {
-        display: none;
+        margin-left: 24px;
     }
 
 
-    header .mob_menu_btn
+    header .menu_item > a
     {
-        display: flex;
+        padding: 13px 0;
+    }
+
+
+    header .menu .sub_menu .padding
+    {
+        padding-left: 240px;
+    }
+
+
+    header .menu .sub_menu .bg
+    {
+        width: 240px;
+    }
+
+
+    header .support_btn
+    {
+        padding: 12px 29px;
     }
 
 
@@ -214,7 +231,7 @@
     ------------------*/
     .product_info .desc,
     .product_info .data,
-    .product_info .image
+    .product_info .images
     {
         width: calc(50% - 24px);
     }

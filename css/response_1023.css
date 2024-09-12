@@ -21,6 +21,23 @@
 
 
 
+    /*------------
+        Header
+    ------------*/
+    header .menu,
+    header .support_btn
+    {
+        display: none;
+    }
+
+
+    header .mob_menu_btn
+    {
+        display: flex;
+    }
+
+
+
     /*----------------
         Typography
     ----------------*/
@@ -164,7 +181,7 @@
     }
 
 
-    .product_info .image
+    .product_info .images
     {
         width: 392px;
         margin-left: 0;
@@ -261,16 +278,6 @@
     .directions .row .item .arrow
     {
         display: none;
-    }
-
-
-
-    /*-------------
-        History
-    -------------*/
-    .history .item.animated .gradient_year
-    {
-        transform: translateX(0);
     }
 
 

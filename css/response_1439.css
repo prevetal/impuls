@@ -139,19 +139,9 @@
     ------------------*/
     .product_info .desc,
     .product_info .data,
-    .product_info .image
+    .product_info .images
     {
         width: calc(50% - 40px);
-    }
-
-
-    .product_info .slider .swiper-slide
-    {
-        visibility: visible;
-
-        pointer-events: auto;
-
-        opacity: 1;
     }
 
 

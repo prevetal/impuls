@@ -22,12 +22,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Product slider
-	let productSlider = document.querySelector('.product_info .slider.swiper')
+	let productSlider = document.querySelector('.product_info .images .swiper')
 
 	if (productSlider) {
-		new Swiper('.product_info .slider.swiper', {
+		new Swiper('.product_info .images .swiper', {
 			loop: true,
-			speed: 750,
+			speed: 500,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
@@ -91,6 +91,32 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 		Thumbs: {
 			autoStart: false
+		}
+	})
+
+
+	// Menu
+	$('header .menu_item > a.sub_link').click(function(e) {
+		e.preventDefault()
+
+		$('header .menu_item > a.sub_link').removeClass('active')
+		$('header .menu .sub_menu').removeClass('show')
+
+		$('body').addClass('menu_open')
+
+		$(this).addClass('active')
+		$(this).next().addClass('show')
+
+		if (is_touch_device()) $('body').css('cursor', 'pointer')
+	})
+
+	$(document).click(e => {
+		if ($(e.target).closest('header .menu').length === 0) {
+			$('header .menu_item > a.sub_link').removeClass('active')
+			$('header .menu .sub_menu').removeClass('show')
+			$('body').removeClass('menu_open')
+
+			if (is_touch_device()) $('body').css('cursor', 'default')
 		}
 	})
 
@@ -257,6 +283,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+window.addEventListener('load', function () {
+	// History
+	moveYears()
+})
+
+
+window.addEventListener('scroll', function () {
+	// History
+	moveYears()
+})
+
+
+
 window.addEventListener('resize', function () {
 	WH = window.innerHeight || document.clientHeight || BODY.clientHeight
 
@@ -285,3 +324,24 @@ window.addEventListener('resize', function () {
 		}
 	}
 })
+
+
+
+// History
+function moveYears() {
+	let allPath = $(window).outerHeight(),
+		biasPath = 100
+
+	$('.history .item .gradient_year').each(function() {
+		let elOffset = $(this).offset().top,
+			startAnimate = $(window).scrollTop() + allPath
+
+		if (startAnimate > elOffset) {
+			let bias = (startAnimate - elOffset) / allPath
+
+			if (bias < 1 && bias > 0) {
+				$(this).css('transform', `translateX(-${biasPath * bias}px)`)
+			}
+		}
+	})
+}
