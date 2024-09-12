@@ -99,22 +99,32 @@ document.addEventListener('DOMContentLoaded', function () {
 	$('header .menu_item > a.sub_link').click(function(e) {
 		e.preventDefault()
 
-		$('header .menu_item > a.sub_link').removeClass('active')
-		$('header .menu .sub_menu').removeClass('show')
+		if (!$(this).hasClass('active')) {
+			$('header .menu_item > a.sub_link').removeClass('active')
+			$('header .menu .sub_menu').removeClass('show')
 
-		$('body').addClass('menu_open')
+			$('body').addClass('menu_open')
 
-		$(this).addClass('active')
-		$(this).next().addClass('show')
+			$(this).addClass('active')
+			$(this).next().addClass('show')
 
-		if (is_touch_device()) $('body').css('cursor', 'pointer')
+			if (is_touch_device()) $('body').css('cursor', 'pointer')
+		} else {
+			$('body').removeClass('menu_open')
+
+			$(this).removeClass('active')
+			$(this).next().removeClass('show')
+
+			if (is_touch_device()) $('body').css('cursor', 'default')
+		}
 	})
 
 	$(document).click(e => {
 		if ($(e.target).closest('header .menu').length === 0) {
+			$('body').removeClass('menu_open')
+
 			$('header .menu_item > a.sub_link').removeClass('active')
 			$('header .menu .sub_menu').removeClass('show')
-			$('body').removeClass('menu_open')
 
 			if (is_touch_device()) $('body').css('cursor', 'default')
 		}

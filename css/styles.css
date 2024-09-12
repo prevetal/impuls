@@ -174,7 +174,8 @@ body
 }
 
 
-body.lock
+body.lock,
+body.menu_open
 {
     overflow: hidden;
 }
@@ -643,7 +644,7 @@ header .menu .sub_menu
 
     min-width: 100%;
     min-height: 344px;
-    padding: 24px 0;
+    max-height: calc(100vh - 125px);
 
     transition: .2s linear;
     pointer-events: none;
@@ -662,6 +663,17 @@ header .menu .sub_menu.show
     pointer-events: auto;
 
     opacity: 1;
+}
+
+
+header .menu .sub_menu .scroll
+{
+    overflow: auto;
+
+    max-height: calc(100vh - 125px);
+    padding: 24px 0;
+
+    overscroll-behavior-y: contain;
 }
 
 
@@ -4149,11 +4161,15 @@ footer .creator a
     border: 2px solid #fff;
 }
 
+.modal .form .submit_btn:before
+{
+    background: #fff;
+}
+
 
 .modal .form .submit_btn:hover
 {
-    color: #de6225;
-    background: #fff;
+    color: #000;
 }
 
 

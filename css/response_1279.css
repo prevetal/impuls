@@ -68,6 +68,12 @@
     }
 
 
+    header .menu .sub_menu .scroll
+    {
+        max-height: calc(100vh - 119px);
+    }
+
+
     header .menu .sub_menu .bg
     {
         width: 240px;
